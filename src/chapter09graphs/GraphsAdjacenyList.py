@@ -9,12 +9,13 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 import sys
+import math
 class Vertex:
     def __init__(self, node):
         self.id = node
         self.adjacent = {}
         # Set distance to infinity for all nodes
-        self.distance = sys.maxint
+        self.distance = math.inf
         # Mark all nodes unvisited        
         self.visited = False  
         # Predecessor
@@ -110,5 +111,5 @@ if __name__ == '__main__':
     G.addEdge('c', 'd', 4)
     G.addEdge('d', 'e', 4)
 
-    print 'Graph data:'
-    print G.getEdges()
+    print ('Graph data:')
+    print (G.getEdges())
